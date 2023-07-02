@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="669.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventorysystem.modifyPartFormController">
+   <children>
+      <Button layoutX="313.0" layoutY="405.0" mnemonicParsing="false" onAction="#saveBtn" text="Save" />
+      <Button layoutX="370.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToMainForm" text="Cancel" />
+      <Label layoutX="62.0" layoutY="55.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="105.0" text="ID" />
+      <Label layoutX="81.0" layoutY="155.0" text="Name" />
+      <Label layoutX="81.0" layoutY="205.0" text="Inv" />
+      <Label layoutX="82.0" layoutY="255.0" text="Price/Cost" />
+      <Label layoutX="83.0" layoutY="305.0" text="Max" />
+      <Label fx:id="myLabel" layoutX="83.0" layoutY="355.0" text="Machine ID" />
+      <TextField fx:id="idInput" disable="true" editable="false" layoutX="180.0" layoutY="105.0" promptText="Auto Gen-DIsabled" />
+      <TextField fx:id="nameInput" layoutX="180.0" layoutY="155.0" />
+      <TextField fx:id="inventoryInput" layoutX="180.0" layoutY="205.0" />
+      <TextField fx:id="minInput" layoutX="386.0" layoutY="305.0" />
+      <TextField fx:id="priceInput" layoutX="180.0" layoutY="255.0" />
+      <TextField fx:id="maxInput" layoutX="180.0" layoutY="305.0" />
+      <TextField fx:id="radioButtonInput" layoutX="180.0" layoutY="355.0" />
+      <Label layoutX="350.0" layoutY="305.0" text="Min" />
+      <RadioButton fx:id="inHouseBtn" layoutX="206.0" layoutY="55.0" mnemonicParsing="false" onAction="#changeText" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="radio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outsourcedBtn" layoutX="289.0" layoutY="55.0" mnemonicParsing="false" onAction="#changeText" text="Outsourced" toggleGroup="$radio" />
+      <Label fx:id="exceptionLabel" layoutX="65.0" layoutY="445.0" />
+      <Label fx:id="inventoryErrorLabel" layoutX="65.0" layoutY="460.0" />
+      <Label fx:id="priceErrorLabel" layoutX="65.0" layoutY="475.0" />
+      <Label fx:id="maxErrorLabel" layoutX="65.0" layoutY="490.0" />
+      <Label fx:id="minErrorLabel" layoutX="65.0" layoutY="505.0" />
+   </children>
+</AnchorPane>
